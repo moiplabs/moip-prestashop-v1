@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+	<name>moip</name>
+	<displayName><![CDATA[Moip Pagamentos]]></displayName>
+	<version><![CDATA[2.1]]></version>
+	<description><![CDATA[O Checkout Transparente &eacute; a ferramenta ideal para quem busca aumentar a taxa de convers&atilde;o de suas vendas,
+e dar mais seguran&ccedil;a para os seus clientes no momento da compra.]]></description>
+	<author><![CDATA[Moip Labs]]></author>
+	<tab><![CDATA[payments_gateways]]></tab>
+	<confirmUninstall><![CDATA[Tem certeza de que deseja desinstalar o Módulo Moip?]]></confirmUninstall>
+	<is_configurable>1</is_configurable>
+	<need_instance>1</need_instance>
+	<limited_countries></limited_countries>
+</module>

@@ -1,0 +1,173 @@
+@mixin text-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0,0,0,.4)) {
+    text-shadow: $x $y $blur $color;
+}
+
+
+@mixin box-shadow($top, $left, $blur, $color, $inset:"") {
+  -webkit-box-shadow:$top $left $blur $color #{$inset};
+  -moz-box-shadow:$top $left $blur $color #{$inset};
+  box-shadow:$top $left $blur $color #{$inset};
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+}
+
+.clear {
+  clear: left; height: 0px; line-height: 0px;
+}
+
+.moipay {
+  text-align: center; margin-bottom: 20px; border-bottom: 1px solid #CCC;
+  legend {
+    font-weight: bold; font-size: 14px; text-align: center; color: #666; width: 100%; margin-bottom: 20px;
+  }
+  .pchoice {
+    width:80px; @include border-radius(5px); display: inline-block; text-align: center; padding: 10px 0; margin: 10px; cursor: pointer;
+    input {
+      display: block; margin:0 auto 10px auto;
+    }
+  }
+  .pchoice:hover,
+  .active-choice {
+    background: #FFF; @include box-shadow(0, 0, 5px, #666);
+  }
+  .payform {
+    text-align: left; background: #FFF; padding: 20px; margin: 10px; border: 1px solid #CCC; @include border-radius(5px);
+    legend {
+      clear: left; font-weight: bold; font-size: 14px; margin-bottom: 10px; width: auto;
+    }
+    ul {
+      clear: left;
+      li {
+        float: left; margin:5px 0; margin-right: 10px; width: 45%;
+        label {
+          display: block; margin-bottom: 5px;
+          span {
+            font-size: 10px; font-style: italic; color: #999;
+          }
+        }
+        input, select {
+          @include border-radius(5px); background: #FAFAFA; color: #000; border: 1px solid #CCC; padding: 5px; font-size: 14px;
+        }
+        input:focus, input:active,
+        select:focus, select:active {
+          background: #FFF; @include box-shadow(0,0,4px,#666); border: 1px solid #000;
+        }
+        .validate_erro {
+          @include box-shadow(0,0,4px,#FFBABA); border: 1px solid #D8000C;
+        }
+        button {
+          margin: 0.2em 0;
+        }
+      }
+      .parcelamentoCartao {
+        font-weight: bold; font-size: 13px; vertical-align: bottom; line-height: 45px;
+      }
+    }
+  }
+  .escolha-side-full {
+    text-align: center;
+    legend {
+      text-align: center; width: 100%;
+    }
+    button {
+      margin: 0.2em auto;
+    }
+  }
+  button {
+    -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  -o-background-clip: padding-box;
+  -ms-background-clip: padding-box;
+  -khtml-background-clip: padding-box;
+  background-clip: padding-box;
+  border-width: 1px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -o-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -khtml-border-radius: 6px;
+  border-radius: 6px;
+  border-style: solid;
+  color: white;
+  display: block;
+  
+  padding: 12px 15px;
+  text-align: center;
+  text-decoration: none;
+background-color: #63bb4a;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #83c96f), color-stop(50%, #63bb4a), color-stop(100%, #4e9939));
+  background-image: -moz-linear-gradient(top, #83c96f 0%, #63bb4a 50%, #4e9939 100%);
+  background-image: linear-gradient(top, #83c96f 0%, #63bb4a 50%, #4e9939 100%);
+  border-color: #3b742b;
+  border-left-color: #63bb4a;
+  border-top-color: #63bb4a;
+  -moz-box-shadow: rgba(233, 233, 233, 0.5) 1px 1px 0 0 inset;
+  -webkit-box-shadow: rgba(233, 233, 233, 0.5) 1px 1px 0 0 inset;
+  -o-box-shadow: rgba(233, 233, 233, 0.5) 1px 1px 0 0 inset;
+  box-shadow: rgba(233, 233, 233, 0.5) 1px 1px 0 0 inset;
+  color: white;
+  text-shadow: #458632 0 1px 2px;
+  font-size: 14px; font-weight: bold;
+  cursor: pointer;
+  }
+  button:hover, button.green:focus {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #93d082), color-stop(50%, #73c25d), color-stop(100%, #4e9939));
+  background-image: -moz-linear-gradient(top, #93d082 0%, #73c25d 50%, #4e9939 100%);
+  background-image: linear-gradient(top, #93d082 0%, #73c25d 50%, #4e9939 100%);
+}
+/* line 50, _multi-line-button.sass */
+button:active, button.depressed {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #5f9f4c), color-stop(100%, #6aaf56));
+  background-image: -moz-linear-gradient(top, #5f9f4c 0%, #6aaf56 100%);
+  background-image: linear-gradient(top, #5f9f4c 0%, #6aaf56 100%);
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+  border-color: #3b742b;
+}
+
+}
+
+#cartaoNumero,
+#nomePortador { width: 85%; }
+
+
+.escolha {
+  display: none;
+
+}
+
+
+
+/*---------------------------------------------ATRIBUTOS------------------------------------------------*/
+
+#blank {
+  font-family: "Lucida Grande", sans-serif;
+  font-size: 10px;
+  /*border-color: #FFB2B2;**/
+}
+
+.alert {
+  background-color: #FFB2B2;
+}
+
+#alert-area {
+  margin-bottom: 20px;
+  li {
+    list-style: circle;
+    color: #D8000C;
+    background-color: #FFBABA; margin: 0; list-style-position: inside; float: none; width: auto; padding: 5px;
+  }
+}
+
+
+.validate_success {
+  background-color: #C1FFC1;
+}
